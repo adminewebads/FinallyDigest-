@@ -1,0 +1,5 @@
+Add ability to load a DLL that needs other DLLs. For example: libcurl.dll needs libeay32.dll and ssleay32.dll for https support. Now you can load all of them by MemoryDll UDF. Before this version, only libcurl.dll can loaded by MemoryDll, other files must store on the disk.
+Add ability to call functions by ordinal value.
+Add MemoryDllRun(). It run a EXE file from memory. Relocation table in EXE file is required. Most PE rebuilding tools remove the section to reduce the file size.
+Add a script to demonstrate all the new features.
+This version of MemoryDll can works together with BinaryCall UDF. Binary machine code can call functions in DLL loaded by MemoryDll.
